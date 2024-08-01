@@ -1,16 +1,28 @@
 /* index.css */
 header {
-    background-color: transparent;
+    background-color: white; /* 背景色を白に設定 */
     padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 10px 0; /* 上下のパディングを設定 */
+    z-index: 1000; /* 他の要素より前面に表示 */
 }
 
 header h1 {
     margin: 0;
     font-size: 24px;
     color: #333;
+    display: none; /* 初期状態では非表示 */
+    opacity: 0; /* 初期状態では透明 */
+    transition: opacity 1s ease-in-out; /* アニメーションの設定 */
+}
+
+nav {
+    margin-left: auto; /* メニューバーを右に寄せる */
 }
 
 nav ul {
@@ -34,4 +46,17 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #111;
     color: white;
+}
+
+/* ヘッダーの高さ分だけコンテンツを下にずらす */
+body {
+    padding-top: 60px; /* ヘッダーの高さに合わせて調整 */
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 50px;
 }
