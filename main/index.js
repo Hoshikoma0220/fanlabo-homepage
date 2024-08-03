@@ -6,15 +6,15 @@ window.addEventListener('scroll', function() {
     
     isScrolling = setTimeout(() => {
         if (window.scrollY === 0) {
-            mainTitle.style.opacity = '0'; // フェードアウトを開始
+            mainTitle.style.opacity = '0'; 
             setTimeout(() => {
-                mainTitle.style.display = 'none'; // フェードアウトが完了したら非表示にする
-            }, 1000); // 1秒後にdisplayをnoneにする（CSSのtransition時間と一致）
+                mainTitle.style.display = 'none';
+            }, 1000); 
         } else {
-            mainTitle.style.display = 'block'; // 表示にする
+            mainTitle.style.display = 'block'; 
             setTimeout(() => {
-                mainTitle.style.opacity = '1'; // フェードインを開始
-            }, 10); // displayをblockに設定した後、少し待ってからopacityを変更
+                mainTitle.style.opacity = '1'; 
+            }, 10); 
         }
-    }, 50); // スクロールイベントのデバウンス
+    }, 50); 
 });
