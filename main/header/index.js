@@ -20,5 +20,5 @@ function handleScroll() {
 }
 
 handleScroll();
-　
+
 window.addEventListener('scroll', handleScroll);
